@@ -9,7 +9,8 @@ add_files -tb test.cpp
 set_top top
 
 # Define the FPGA board - not important
-set_part  {xcvu9p-flga2104-2-i}
+# set_part  {xcvu9p-flga2104-2-i}
+set_part  {xc7z020clg484-1}
 # Define the clock rate in ns
 create_clock -period 4
 
@@ -19,3 +20,7 @@ csim_design
 csynth_design
 # Run hardware simulation and check the equivalence between C & RTL
 cosim_design -trace_level all
+
+# Run hardware implementation to get accurate area results
+# This could take long time - you can comment it out when debugging
+export_design -flow syn -format ip_catalog
