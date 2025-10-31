@@ -53,6 +53,8 @@ RUN printf "\
 \n# Thread setup \
 \nexport nproc=\$(grep -c ^processor /proc/cpuinfo) \
 \nexport LD_PRELOAD=/lib/x86_64-linux-gnu/libudev.so.1 \
+\nexport SNPS_LICENSE_FILE=27020@dhcp-91-091 \
+\nexport SNPSLMD_LICENSE_FILE=27020@dhcp-91-091 \
 \n# Terminal color... \
 \nexport PS1=\"[\\\\\\[\$(tput setaf 3)\\\\\\]\\\t\\\\\\[\$(tput setaf 2)\\\\\\] \\\u\\\\\\[\$(tput sgr0)\\\\\\]@\\\\\\[\$(tput setaf 2)\\\\\\]\\\h \\\\\\[\$(tput setaf 7)\\\\\\]\\\w \\\\\\[\$(tput sgr0)\\\\\\]] \\\\\\[\$(tput setaf 6)\\\\\\]$ \\\\\\[\$(tput sgr0)\\\\\\]\" \
 \nexport LS_COLORS='rs=0:di=01;96:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01' \
